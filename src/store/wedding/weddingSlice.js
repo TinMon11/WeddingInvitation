@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+const { createSlice } = require("@reduxjs/toolkit");
 
 export const weddingSlice = createSlice({
   name: "weddings",
@@ -30,5 +30,4 @@ export const weddingSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { onAddNewSong, onAddNewLike, onGetSongs } =
-  weddingSlice.actions;
+export const { onAddNewSong, onAddNewLike, onGetSongs } = weddingSlice.actions;
