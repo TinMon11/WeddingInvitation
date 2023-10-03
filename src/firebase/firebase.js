@@ -26,16 +26,6 @@ const firebaseConfig = {
   measurementId: FIREBASE_MEASUREMENTID,
 };
 
-// const firebaseConfig = {
-//   apiKey: "AIzaSyAFdPimRFAhNEGOCo4rQ6YHW9CofW1Z1iw",
-//   authDomain: "weddingsongs-c87fd.firebaseapp.com",
-//   projectId: "weddingsongs-c87fd",
-//   storageBucket: "weddingsongs-c87fd.appspot.com",
-//   messagingSenderId: "407247720467",
-//   appId: "1:407247720467:web:217b800f3838da618e6fe6",
-//   measurementId: "G-STJCZDBL43",
-// };
-
 // Initialize Firebase
 export const FirebaseApp = initializeApp(firebaseConfig);
 export const FirebaseDB = getFirestore(FirebaseApp);
