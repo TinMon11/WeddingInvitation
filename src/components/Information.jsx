@@ -1,4 +1,11 @@
+import axios from "axios";
 import React from "react";
+
+const URL = "http://localhost:3000/sumar";
+const callEndpoint = async () => {
+  const res = await axios.post(URL, { numero1: 1, numero2: 2 });
+  console.log(res);
+};
 
 export const Information = () => {
   return (
@@ -15,6 +22,7 @@ export const Information = () => {
         </p>
         <p>Contáctanos si deseas más información.</p>
         <button
+          onClick={callEndpoint}
           className="text-md mt-6 bg-white text-[#9aaa9a] rounded-full py-2 w-36
         hover:bg-[#9aaa9a] hover:text-white hover:border-white border-[1px] border-white
         transition duration-300 ease-in-out transform"
