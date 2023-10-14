@@ -10,30 +10,18 @@ import { Songs } from "../components/Songs";
 import { Information } from "../components/Information";
 import { Welcome } from "../components/Welcome";
 
-const Premium = ({
-  background,
-  name1,
-  name2,
-  homeTextColor,
-  homeTextFontStyle,
-}) => {
+const Premium = ({ name1, name2, invitationStyle }) => {
   return (
     <>
-      <Welcome
-        background={background}
-        name1={name1}
-        name2={name2}
-        homeTextColor={homeTextColor}
-        homeTextFontStyle={homeTextFontStyle}
-      />
-      <DaySection backgroundColor={"#242526"} />
-      <Ceremony />
+      <Welcome invitationStyle={invitationStyle} name1={name1} name2={name2} />
+      <DaySection invitationStyle={invitationStyle} />
+      <Ceremony invitationStyle={invitationStyle}/>
       <AboutUs />
       <Gifts />
       <ConfirmAssist />
       <DressCode />
       <Instagram />
-      <Songs />
+      <Songs name1={name1} name2={name2} />
       <Information />
     </>
   );

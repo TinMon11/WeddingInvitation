@@ -13,24 +13,16 @@ export const App = () => {
           <Route
             path="/premium"
             element={
-              <Premium
-                background={"background_premium"}
-                name1="Marta"
-                name2="Juan"
-                homeTextColor={"text-white"}
-                homeTextFontStyle={"handwritting"}
-              />
+              <Premium name1="Cata" name2="Mateo" invitationStyle={"premium"} />
             }
           />
           <Route
             path="/classic"
             element={
               <Classic
-                background={"background"}
                 name1="Cande"
                 name2="Nacho"
-                homeTextColor={"text-black"}
-                homeTextFontStyle={"handwritting2"}
+                invitationStyle={"classic"}
               />
             }
           />

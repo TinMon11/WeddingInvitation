@@ -9,10 +9,9 @@ const formData = {
   artist: "",
 };
 
-export const Songs = () => {
+export const Songs = ({ name1, name2 }) => {
+  const thisWeddingId = `${name1}-${name2}`;
   const { addNewLike, addNewSong, getWeddingSongs } = useWeddingStore();
-
-  const thisWeddingId = "Marta-Antonio";
 
   const { formState, title, artist, onInputChange, onResetForm } =
     useForm(formData);

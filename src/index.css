@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;700;900&family=Mrs+Saint+Delafield&family=Parisienne&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;700;900&&family=Luxurious+Script&family=Parisienne&family=Dancing+Script:wght@400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -23,6 +23,12 @@ body {
   opacity: 0; /* Inicialmente oculto */
   animation: arrow-fade 1.5s infinite alternate; /* 2s de duración de animación, alternando entre fade in y fade out */
   transform: translateX(-50%);
+}
+
+.heart-icon {
+  font-size: 64px; /* Ajusta el tamaño según tus necesidades */
+  /* Color White */
+  color: #fff;
 }
 
 @keyframes arrow-fade {
