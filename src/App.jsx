@@ -17,9 +17,9 @@ const App = () => {
       <div className="relative z-[1]">
         <div className="bg-cover bg-center min-h-screen">
           <div className="font-handwritting2 flex flex-col items-center justify-center min-h-screen gap-4 p-2">
-            <h1 className="text-8xl">Marta</h1>
+            <h1 className="text-8xl">Victoria</h1>
             <h1 className="text-8xl">y</h1>
-            <h1 className="text-8xl">Antonio</h1>
+            <h1 className="text-8xl">Gonzalo</h1>
             <h2 className="text-3xl text-center text-gray-700">Nuestra Boda</h2>
           </div>
         </div>

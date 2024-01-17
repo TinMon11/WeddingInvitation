@@ -7,11 +7,21 @@ export const ConfirmAssist = () => {
       <h2 className="text-xl">
         Os esperamos en este gran día. ¡Confírmanos tu asistencia!
       </h2>
-      <button className="text-md mt-6 bg-[#9aaa9a] text-white rounded-full py-2 w-60
-      hover:bg-white hover:text-[#9aaa9a] hover:border-[#9aaa9a] border-[1px] border-[#9aaa9a]
-      transition duration-300 ease-in-out transform">
+      <button className="text-md mt-6 bg-[#BD8C39] text-white rounded-full py-2 w-60
+      hover:bg-white hover:text-[#BD8C39] hover:border-[#BD8C39] border-[1px] border-[#BD8C39]
+      transition duration-300 ease-in-out transform"
+      onClick={onConfirmAssist}
+      >
         CONFIRMAR ASISTENCIA
       </button>
     </div>
   );
 };
+
+// Send whatsapp message on click
+const onConfirmAssist = () => {
+  window.open(
+    "https://api.whatsapp.com/send?phone=5491130775787&text=Hola!%20Quiero%20confirmar%20mi%20asistencia%20!",
+    "_blank"
+  );
+}

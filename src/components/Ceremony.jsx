@@ -11,19 +11,19 @@ export const Ceremony = () => {
           className="w-20 h-20 mb-6"
         />
         <h2 className="text-2xl font-medium mb-6">CEREMONIA</h2>
-        <h3>26 de Agosto de 2023</h3>
-        <h3>17:00 horas</h3>
-        <h3>Basílica Pontificia de San Miguel</h3>
-        <h3>C. de San Justo, 4, Madrid.</h3>
+        <h3>17 de Febrero de 2024</h3>
+        <h3>19:30 horas</h3>
+        <h3>Hospedaje San Francisco</h3>
+        {/* <h3>C. de San Justo, 4, Madrid.</h3> */}
         {/*  Link But Opening a New Tab */}
         <a
           target="_blank"
           rel="noopener"
-          href="https://goo.gl/maps/FQECR6YX2K9Vbo8Q7"
+          href="https://maps.app.goo.gl/1HMF46FQdFY1fxDF9"
         >
           <button
-            className="mt-6 bg-[#9aaa9a] text-white rounded-full py-2 w-72 
-          hover:bg-white hover:text-[#9aaa9a] hover:border-[#9aaa9a] border-[1px] border-[#9aaa9a]
+            className="mt-6 bg-[#BD8C39] text-white rounded-full py-2 w-72 
+          hover:bg-white hover:text-[#BD8C39] hover:border-[#BD8C39] border-[1px] border-[#BD8C39]
           transition duration-300 ease-in-out transform
           "
           >
@@ -39,19 +39,19 @@ export const Ceremony = () => {
         />
 
         <h2 className="text-2xl font-medium mb-6">FIESTA</h2>
-        <h3>26 de Agosto de 2023</h3>
+        <h3>17 de Febrero de 2024</h3>
         <h3>19:30 horas</h3>
-        <h3>Finca Las Tenadas</h3>
-        <h3>Carretera Madrid KM 30, Colmenar Viejo, Madrid.</h3>
+        <h3>Hospedaje San Francisco</h3>
+        {/* <h3>Carretera Madrid KM 30, Colmenar Viejo, Madrid.</h3> */}
         {/*  RGB 154 170 154 */}
         <a
           target="_blank"
           rel="noopener"
-          href="https://goo.gl/maps/uqAFRo3oACzpVPNq7"
+          href="https://maps.app.goo.gl/1HMF46FQdFY1fxDF9"  
         >
           <button
-            className="mt-6 bg-[#9aaa9a] text-white rounded-full py-2 w-72 
-          hover:bg-white hover:text-[#9aaa9a] hover:border-[#9aaa9a] border-[1px] border-[#9aaa9a]
+            className="mt-6 bg-[#BD8C39] text-white rounded-full py-2 w-72 
+          hover:bg-white hover:text-[#BD8C39] hover:border-[#BD8C39] border-[1px] border-[#BD8C39]
           transition duration-300 ease-in-out transform
           "
           >

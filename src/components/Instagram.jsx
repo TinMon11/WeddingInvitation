@@ -8,16 +8,16 @@ export const Instagram = () => {
         alt="icon-gift"
         className="w-40 h-40 mb-2"
       />
-      <h2 className="text-3xl font-medium mb-4">#MartayAntonio</h2>
+      <h2 className="text-3xl font-medium mb-4">#GonzayVicky</h2>
       <p>¡Prepárate para nuestro gran día!</p>
       <p>Usa nuestro hashtag en tus fotos y videos.</p>
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href="https://www.instagram.com/explore/tags/martayantonio/"
+        href="https://www.instagram.com/explore/tags/gonzayvicky/"
       >
         <button
-          className="text-md mt-6 bg-[#9aaa9a] text-white rounded-full py-2 w-60 hover:bg-white hover:text-[#9aaa9a] hover:border-[#9aaa9a] border-[1px] border-[#9aaa9a]
+          className="text-md mt-6 bg-[#BD8C39] text-white rounded-full py-2 w-60 hover:bg-white hover:text-[#BD8C39] hover:border-[#BD8C39] border-[1px] border-[#BD8C39]
         transition duration-300 ease-in-out transform"
         >
           VER FOTOS INSTAGRAM
