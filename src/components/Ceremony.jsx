@@ -2,7 +2,7 @@ import React from "react";
 
 export const Ceremony = () => {
   return (
-    <div className="pt-24 bg-white flex flex-row gap-12 flex-wrap justify-evenly mb-12 w-full">
+    <div className="pt-24 bg-white flex flex-row gap-12 flex-wrap justify-evenly pb-12 w-full">
       {/* <div className="flex flex-col w-96 text-center items-center">
         <img
           src="https://cdn-icons-png.flaticon.com/512/1683/1683840.png"

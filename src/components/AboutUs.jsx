@@ -8,8 +8,8 @@ import image_6 from "../assets/image_6.png";
 
 export const AboutUs = () => {
   return (
-    <div className="md:pt-0 h-[calc(100vh-32px)]xl:pt-0 flex flex-col text-center justify-center bg-white pb-2">
-      <h1 className="text-3xl mb-8 font-medium">NOSOTROS...</h1>
+    <div className="md:pt-0 h-[calc(100vh-32px)]xl:pt-0 flex flex-col text-center justify-center pb-2">
+      <h1 className="text-3xl mt-6 mb-8 font-medium">NOSOTROS...</h1>
       <div className="px-4 md:px-32 grid grid-cols-2 gap-1 xl:grid-cols-4 justify-items-center">
         <img
           src={image_1}
