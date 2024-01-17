@@ -40,9 +40,9 @@ export const Songs = () => {
   return (
     <div className="pb-12 text-center bg-white text-black flex flex-col justify-center items-center">
       <img
-        src="https://agendalafecha.com/es/boda/assets/img/icono-canciones.svg"
-        alt="icon-gift"
-        className="w-40 h-40 mb-2"
+        src="https://cdn-icons-png.flaticon.com/512/126/126493.png"
+        alt="icon-music"
+        className="w-20 h-20 mb-4"
       />
       <div className="w-4/5">
         <h1 className="text-3xl mb-4">¿QUÉ CANCIONES NO PUEDEN FALTAR?</h1>

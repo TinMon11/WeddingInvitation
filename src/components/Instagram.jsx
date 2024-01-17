@@ -4,9 +4,9 @@ export const Instagram = () => {
   return (
     <div className="w-full h-[calc(100vh-150px)] flex flex-col justify-center items-center">
       <img
-        src="https://agendalafecha.com/es/boda/assets/img/icono-instagram.svg"
-        alt="icon-gift"
-        className="w-40 h-40 mb-2"
+        src="https://cdn-icons-png.flaticon.com/512/2111/2111679.png"
+        alt="icon-instagram"
+        className="w-20 h-20 mb-4"
       />
       <h2 className="text-3xl font-medium mb-4">#GonzayVicky</h2>
       <p>¡Prepárate para nuestro gran día!</p>

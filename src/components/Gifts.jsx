@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy } from "@fortawesome/free-solid-svg-icons";
+import giftIcon from "../assets/gift-icon.png";
 import Modal from "react-modal";
 
 const modalStyles = {
@@ -65,9 +66,9 @@ const Gifts = () => {
       <div className="pb-8 w-full bg-[#BD8C39] text-white flex flex-col justify-center items-center">
         <div className="h-1/3 items-center">
           <img
-            src="https://agendalafecha.com/es/boda/assets/img/icono-regalo.svg"
+            src={giftIcon}
             alt="icon-gift"
-            className="w-36 h-36"
+            className="mb-2 mt-2 w-20 h-20"
           />
         </div>
         <h2 className="text-md text-center mt-2 w-3/4">
