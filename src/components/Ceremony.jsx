@@ -2,9 +2,8 @@ import React from "react";
 
 export const Ceremony = () => {
   return (
-    <div className="pt-24 bg-white flex flex-row gap-12 flex-wrap justify-evenly min-h-[calc(100vh-96px)] w-full">
-      <div className="flex flex-col w-96 text-center items-center">
-        {/* Icono con la imagen icon-ceremony de la carpeta assets */}
+    <div className="pt-24 bg-white flex flex-row gap-12 flex-wrap justify-evenly mb-12 w-full">
+      {/* <div className="flex flex-col w-96 text-center items-center">
         <img
           src="https://cdn-icons-png.flaticon.com/512/1683/1683840.png"
           alt="icon-ceremony"
@@ -14,8 +13,6 @@ export const Ceremony = () => {
         <h3>17 de Febrero de 2024</h3>
         <h3>19:30 horas</h3>
         <h3>Hospedaje San Francisco</h3>
-        {/* <h3>C. de San Justo, 4, Madrid.</h3> */}
-        {/*  Link But Opening a New Tab */}
         <a
           target="_blank"
           rel="noopener"
@@ -30,7 +27,7 @@ export const Ceremony = () => {
             LLEGAR A LA CEREMONIA
           </button>
         </a>
-      </div>
+      </div> */}
       <div className="flex flex-col w-96 text-center items-center">
         <img
           src="https://cdn-icons-png.flaticon.com/512/1274/1274415.png"

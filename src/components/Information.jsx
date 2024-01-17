@@ -3,7 +3,7 @@ import React from "react";
 export const Information = () => {
   return (
     <>
-      <div className="h-[calc(100vh-150px)] text-white bg-[#BD8C39] flex flex-col justify-center items-center">
+      <div className="h-[calc(100vh-200px)] text-white bg-[#BD8C39] flex flex-col justify-center items-center">
         <h2 className="text-3xl font-medium mb-4">DATOS UTILES</h2>
         <h3 className="text-xl font-medium mb-4">Sugerencia de Hoteles</h3>
         <p>Hotel Caui</p>
@@ -22,10 +22,20 @@ export const Information = () => {
           VER MAS
         </button> */}
       </div>
-      <div className="w-full bg-[#3A2D32] h-24 flex items-center justify-center">
+      {/* <div className="w-full bg-[#3A2D32] h-24 flex items-center justify-center">
         <h1 className="w-4/5 text-xl text-white text-center">
           ¡Gracias por acompañarnos en este momento tan importante! ♥
         </h1>
+      </div> */}
+      <div className="w-full bg-[#3A2D32] h-24 flex items-center justify-center">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.instagram.com/alcancecreativomarketing/"
+          className="w-4/5 text-xl text-white text-center m-auto"
+        >
+          <h1>Tarjeta virtual diseñada por @alcancecreativomkt</h1>
+        </a>
       </div>
     </>
   );

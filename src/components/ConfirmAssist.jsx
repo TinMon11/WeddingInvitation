@@ -21,7 +21,7 @@ export const ConfirmAssist = () => {
 // Send whatsapp message on click
 const onConfirmAssist = () => {
   window.open(
-    "https://api.whatsapp.com/send?phone=5491130775787&text=Hola!%20Quiero%20confirmar%20mi%20asistencia%20!",
+    "https://api.whatsapp.com/send?phone=34633661930&text=Hola!%20Quiero%20confirmar%20mi%20asistencia%20!",
     "_blank"
   );
 }
