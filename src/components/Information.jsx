@@ -11,7 +11,7 @@ export const Information = () => {
         <p>Hotel Aires de La Pampa</p>
         <h2 className="text-xl font-medium mt-4 mb-4">Traslados</h2>
         <p className="w-4/5 text-center">
-          Si necesitas llegar a la estancia desde Pico, contactanos y podemos
+          Si necesitas llegar a la fiesta desde Pico, contactanos y podemos
           coordinar con otros invitados para compartir el viaje.
         </p>
         {/* <button

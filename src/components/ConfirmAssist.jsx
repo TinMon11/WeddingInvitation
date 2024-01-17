@@ -5,7 +5,7 @@ export const ConfirmAssist = () => {
     <div className="w-full text-center bg-white h-80 text-black flex flex-col justify-center items-center">
       <h1 className="text-3xl mb-4">CONFIRMACION DE ASISTENCIA</h1>
       <h2 className="text-xl">
-        Os esperamos en este gran día. ¡Confírmanos tu asistencia!
+        Los esperamos en este gran día. ¡Confírmanos tu asistencia!
       </h2>
       <button className="text-md mt-6 bg-[#BD8C39] text-white rounded-full py-2 w-60
       hover:bg-white hover:text-[#BD8C39] hover:border-[#BD8C39] border-[1px] border-[#BD8C39]
