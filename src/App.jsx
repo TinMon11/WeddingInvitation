@@ -1,4 +1,3 @@
-import React from "react";
 import DaySection from "./components/DaySection";
 import { Ceremony } from "./components/Ceremony";
 import { AboutUs } from "./components/AboutUs";

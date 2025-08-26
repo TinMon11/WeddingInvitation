@@ -45,7 +45,7 @@ jobs:
           coverage/
           test-results/
         retention-days: 7
-        continue-on-error: true
+        if-no-files-found: ignore
 
   deploy-preview:
     runs-on: ubuntu-latest

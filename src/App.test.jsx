@@ -3,7 +3,7 @@ import { Provider } from 'react-redux'
 import { store } from './store/store'
 import App from './App'
 import React from 'react'
-import { vi } from 'vitest'
+import { vi, describe, test, expect } from 'vitest'
 
 // Mock simple de todos los componentes
 vi.mock('./components/DaySection', () => ({
