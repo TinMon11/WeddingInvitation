@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Ceremony = () => {
   return (
     <div className="pt-24 bg-white flex flex-row gap-12 flex-wrap justify-evenly pb-12 w-full">
@@ -43,7 +41,7 @@ export const Ceremony = () => {
         {/*  RGB 154 170 154 */}
         <a
           target="_blank"
-          rel="noopener"
+          rel="noreferrer"
           href="https://maps.app.goo.gl/1HMF46FQdFY1fxDF9"  
         >
           <button

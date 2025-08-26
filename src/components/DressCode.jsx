@@ -1,5 +1,3 @@
-import React from "react";
-
 export const DressCode = () => {
     return (
         <div className="bg-[#BD8C39] h-48 flex flex-col items-center justify-center gap-4 p-2">

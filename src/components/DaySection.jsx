@@ -1,5 +1,3 @@
-import React from "react";
-
 const DaySection = () => {
   return (
     <div className="w-full bg-[#BD8C39] h-32 flex flex-col items-center justify-center gap-4 p-2">

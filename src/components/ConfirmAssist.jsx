@@ -1,5 +1,3 @@
-import React from "react";
-
 export const ConfirmAssist = () => {
   return (
     <div className="w-full text-center bg-white h-80 text-black flex flex-col justify-center items-center">
