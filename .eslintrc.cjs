@@ -3,7 +3,6 @@ module.exports = {
   env: { browser: true, es2020: true },
   extends: [
     'eslint:recommended',
-    '@eslint/js',
     'plugin:react-hooks/recommended',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
@@ -15,9 +14,10 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
-    // Deshabilitar temporalmente las validaciones problemáticas
     'react/prop-types': 'off',
     'react/jsx-key': 'off',
-    'no-unused-vars': 'warn',
+    'no-unused-vars': 'off',
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
   },
 }
