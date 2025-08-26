@@ -13,7 +13,7 @@ export const AboutUs = () => {
       <div className="px-4 md:px-32 grid grid-cols-2 gap-1 xl:grid-cols-4 justify-items-center">
         <img
           src={image_1}
-          className="w-44 h-44 mb-1 md:w-48 md:h-48 xl:w-72 xl:h-72 mb-0 rounded-xl object-cover hover:z-10 hover:scale-110 transform transition-all duration-300"
+          className="w-44 h-44 mb-1 md:w-48 md:h-48 xl:w-72 xl:h-72  rounded-xl object-cover hover:z-10 hover:scale-110 transform transition-all duration-300"
         />
         {/* <img
           src={image_2}
@@ -21,15 +21,15 @@ export const AboutUs = () => {
         /> */}
         <img
           src={image_3}
-          className="w-44 h-44 mb-1 md:w-48 md:h-48 xl:w-72 xl:h-72 mb-0 rounded-xl object-cover hover:z-10 hover:scale-110 transform transition-all duration-300"
+          className="w-44 h-44 mb-1 md:w-48 md:h-48 xl:w-72 xl:h-72  rounded-xl object-cover hover:z-10 hover:scale-110 transform transition-all duration-300"
         />
         <img
           src={image_4}
-          className="w-44 h-44 mb-1 md:w-48 md:h-48 xl:w-72 xl:h-72 mb-0 rounded-xl object-cover hover:z-10 hover:scale-110 transform transition-all duration-300"
+          className="w-44 h-44 mb-1 md:w-48 md:h-48 xl:w-72 xl:h-72  rounded-xl object-cover hover:z-10 hover:scale-110 transform transition-all duration-300"
         />
         <img
           src={image_5}
-          className="w-44 h-44 mb-1 md:w-48 md:h-48 xl:w-72 xl:h-72 mb-0 rounded-xl object-cover hover:z-10 hover:scale-110 transform transition-all duration-300"
+          className="w-44 h-44 mb-1 md:w-48 md:h-48 xl:w-72 xl:h-72 rounded-xl object-cover hover:z-10 hover:scale-110 transform transition-all duration-300"
         />
         {/* <img
           src={image_6}
