@@ -29,7 +29,7 @@ export const Songs = () => {
       await getWeddingSongs({ weddingId: thisWeddingId });
     };
     showSongs && fetchSongs();
-  }, [showSongs]);
+  }, [showSongs, getWeddingSongs, thisWeddingId]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

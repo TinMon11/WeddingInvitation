@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import DaySection from "./components/DaySection";
 import { Ceremony } from "./components/Ceremony";
 import { AboutUs } from "./components/AboutUs";
@@ -9,8 +9,8 @@ import { Instagram } from "./components/Instagram";
 import { Songs } from "./components/Songs";
 import { Information } from "./components/Information";
 import { IoIosArrowDown } from "react-icons/io";
-const App = () => {
 
+const App = () => {
   return (
     <>
       <div className="bg-cover bg-center fixed inset-0 z-[-1] bg-[url('./assets/background.jpg')]"></div>

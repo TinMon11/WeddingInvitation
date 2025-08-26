@@ -1,4 +1,5 @@
 import '@testing-library/jest-dom'
+import { vi } from 'vitest'
 
 // Crear un elemento root para react-modal
 const root = document.createElement('div')

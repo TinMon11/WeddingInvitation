@@ -3,6 +3,7 @@ import { Provider } from 'react-redux'
 import { configureStore } from '@reduxjs/toolkit'
 import { useWeddingStore } from './useWeddingStore'
 import React from 'react'
+import { vi } from 'vitest'
 
 // Mock simple de Firebase
 vi.mock('../firebase/firebase', () => ({
