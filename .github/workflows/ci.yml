@@ -30,7 +30,20 @@ jobs:
         run: npm run lint || echo "Lint completed with warnings"
 
       - name: Run tests with Firebase emulators
-        run: firebase emulators:exec --project tincho-testing --only firestore,auth "npm run test:run"
+        run: |
+          echo "🧪 === INICIANDO TESTS CON EMULADORES ==="
+          echo "1️⃣ Iniciando emuladores..."
+          firebase emulators:exec --project tincho-testing --only firestore,auth "npm run test:run" &
+          EMULATOR_PID=$!
+          
+          echo "2️⃣ Esperando que emuladores estén listos..."
+          sleep 10
+          
+          echo "3️⃣ Ejecutando test de emuladores..."
+          node src/test/emulator-test.js
+          
+          echo "4️⃣ Deteniendo emuladores..."
+          kill $EMULATOR_PID
         env:
           FIRESTORE_EMULATOR_HOST: localhost:8080
           FIREBASE_AUTH_EMULATOR_HOST: localhost:9099
