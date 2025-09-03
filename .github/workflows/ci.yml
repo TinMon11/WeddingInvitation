@@ -59,6 +59,13 @@ jobs:
 
           echo "🏗️ Current project:"
           gcloud config get-value project
+          
+          echo "🔧 Setting project from secrets..."
+          gcloud config set project ${{ secrets.GCP_PROJECT_ID }}
+          echo "✅ Project set to: ${{ secrets.GCP_PROJECT_ID }}"
+          
+          echo "🏗️ Current project (after setting):"
+          gcloud config get-value project
 
       - name: Install Google Cloud SDK
         run: |
