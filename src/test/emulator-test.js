@@ -82,7 +82,7 @@ async function testEmulators() {
     
     // 5. Test de Firestore - Leer documento específico de la data emulada
     console.log('5️⃣ Testing Firestore emulator - Reading specific document from emulated data...');
-    const specificDocRef = doc(db, 'protocols', '0AL8xw6XSeWmDlx6laPd');
+    const specificDocRef = doc(db, 'chains', 'KMPFzMf79Z7QwWXxlUs5');
     const specificDoc = await getDoc(specificDocRef);
     
     if (specificDoc.exists()) {
