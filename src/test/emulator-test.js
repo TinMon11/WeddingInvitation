@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, doc, setDoc, getDoc, collection, addDoc, getDocs } from 'firebase/firestore';
-import { getAuth, signInAnonymously } from 'firebase/auth';
+import { getFirestore, doc, setDoc, getDoc, collection, addDoc, getDocs, connectFirestoreEmulator } from 'firebase/firestore';
+import { getAuth, signInAnonymously, connectAuthEmulator } from 'firebase/auth';
 
 // Configuración para emuladores
 const firebaseConfig = {
@@ -13,9 +13,23 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
 
+// Conectar a emuladores
+if (process.env.FIRESTORE_EMULATOR_HOST) {
+  console.log('🔌 Connecting to Firestore emulator at:', process.env.FIRESTORE_EMULATOR_HOST);
+  connectFirestoreEmulator(db, 'localhost', 8080);
+}
+
+if (process.env.FIREBASE_AUTH_EMULATOR_HOST) {
+  console.log('🔌 Connecting to Auth emulator at:', process.env.FIREBASE_AUTH_EMULATOR_HOST);
+  connectAuthEmulator(auth, 'http://localhost:9099');
+}
+
 // Test de emuladores
 async function testEmulators() {
   console.log('🧪 === TESTING FIREBASE EMULATORS ===');
+  console.log('🌐 Environment variables:');
+  console.log('   FIRESTORE_EMULATOR_HOST:', process.env.FIRESTORE_EMULATOR_HOST);
+  console.log('   FIREBASE_AUTH_EMULATOR_HOST:', process.env.FIREBASE_AUTH_EMULATOR_HOST);
   
   try {
     // 1. Test de Auth

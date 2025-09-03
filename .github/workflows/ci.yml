@@ -32,21 +32,23 @@ jobs:
       - name: Run tests with Firebase emulators
         run: |
           echo "🧪 === INICIANDO TESTS CON EMULADORES ==="
-          echo "1️⃣ Iniciando emuladores..."
-          firebase emulators:exec --project tincho-testing --only firestore,auth "npm run test:run" &
+          echo "1️⃣ Iniciando emuladores en background..."
+          firebase emulators:start --project tincho-testing --only firestore,auth &
           EMULATOR_PID=$!
           
           echo "2️⃣ Esperando que emuladores estén listos..."
-          sleep 10
+          sleep 15
           
-          echo "3️⃣ Ejecutando test de emuladores..."
-          node src/test/emulator-test.js
+          echo "3️⃣ Verificando que emuladores estén corriendo..."
+          curl -s http://localhost:8080 > /dev/null && echo "✅ Firestore emulator running on port 8080"
+          curl -s http://localhost:9099 > /dev/null && echo "✅ Auth emulator running on port 9099"
           
-          echo "4️⃣ Deteniendo emuladores..."
+          echo "4️⃣ Ejecutando test de emuladores..."
+          FIRESTORE_EMULATOR_HOST=localhost:8080 FIREBASE_AUTH_EMULATOR_HOST=localhost:9099 node src/test/emulator-test.js
+          
+          echo "5️⃣ Deteniendo emuladores..."
           kill $EMULATOR_PID
-        env:
-          FIRESTORE_EMULATOR_HOST: localhost:8080
-          FIREBASE_AUTH_EMULATOR_HOST: localhost:9099
+          wait $EMULATOR_PID 2>/dev/null || true
 
       - name: Build project
         run: npm run build
