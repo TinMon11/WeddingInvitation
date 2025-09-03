@@ -2,10 +2,14 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore, doc, setDoc, getDoc, collection, addDoc, getDocs, connectFirestoreEmulator } from 'firebase/firestore';
 import { getAuth, signInAnonymously, connectAuthEmulator } from 'firebase/auth';
 
-// Configuración para emuladores
+// Configuración para emuladores - SIN API keys
 const firebaseConfig = {
   projectId: 'tincho-testing',
-  // No necesitamos API keys para emuladores
+  apiKey: 'fake-api-key-for-emulator',
+  authDomain: 'tincho-testing.firebaseapp.com',
+  storageBucket: 'tincho-testing.appspot.com',
+  messagingSenderId: '123456789',
+  appId: '1:123456789:web:abcdef123456'
 };
 
 // Inicializar Firebase
@@ -13,16 +17,12 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
 
-// Conectar a emuladores
-if (process.env.FIRESTORE_EMULATOR_HOST) {
-  console.log('🔌 Connecting to Firestore emulator at:', process.env.FIRESTORE_EMULATOR_HOST);
-  connectFirestoreEmulator(db, 'localhost', 8080);
-}
+// Conectar a emuladores INMEDIATAMENTE después de inicializar
+console.log('🔌 Connecting to Firestore emulator at localhost:8080');
+connectFirestoreEmulator(db, 'localhost', 8080);
 
-if (process.env.FIREBASE_AUTH_EMULATOR_HOST) {
-  console.log('🔌 Connecting to Auth emulator at:', process.env.FIREBASE_AUTH_EMULATOR_HOST);
-  connectAuthEmulator(auth, 'http://localhost:9099');
-}
+console.log('🔌 Connecting to Auth emulator at localhost:9099');
+connectAuthEmulator(auth, 'http://localhost:9099', { disableWarnings: true });
 
 // Test de emuladores
 async function testEmulators() {
@@ -30,6 +30,7 @@ async function testEmulators() {
   console.log('🌐 Environment variables:');
   console.log('   FIRESTORE_EMULATOR_HOST:', process.env.FIRESTORE_EMULATOR_HOST);
   console.log('   FIREBASE_AUTH_EMULATOR_HOST:', process.env.FIREBASE_AUTH_EMULATOR_HOST);
+  console.log('🔌 Emulator connections established');
   
   try {
     // 1. Test de Auth
