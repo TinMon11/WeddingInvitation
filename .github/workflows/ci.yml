@@ -29,21 +29,34 @@ jobs:
       - name: Setup Google Cloud credentials
         run: |
           echo "🔐 Setting up Google Cloud credentials..."
-          echo "${{ secrets.GOOGLE_APPLICATION_CREDENTIALS_JSON }}" > /tmp/gcp-credentials.json
+
+          # Crear el archivo JSON de forma más robusta
+          echo '${{ secrets.GOOGLE_APPLICATION_CREDENTIALS_JSON }}' > /tmp/gcp-credentials.json
+
           export GOOGLE_APPLICATION_CREDENTIALS=/tmp/gcp-credentials.json
           echo "GOOGLE_APPLICATION_CREDENTIALS=/tmp/gcp-credentials.json" >> $GITHUB_ENV
-          
+
           echo "📁 Credentials file created at: /tmp/gcp-credentials.json"
           echo "📏 File size: $(wc -c < /tmp/gcp-credentials.json) bytes"
           echo "🔑 First 100 chars of credentials: $(head -c 100 /tmp/gcp-credentials.json)..."
-          
+
+          echo "🔍 Verificando formato JSON..."
+          if python3 -m json.tool /tmp/gcp-credentials.json > /dev/null 2>&1; then
+            echo "✅ JSON format is valid"
+          else
+            echo "❌ JSON format is invalid"
+            echo "📄 Content preview:"
+            head -20 /tmp/gcp-credentials.json
+            exit 1
+          fi
+
           echo "🌐 Setting up gcloud auth..."
           gcloud auth activate-service-account --key-file=/tmp/gcp-credentials.json
           echo "✅ Service account activated"
-          
+
           echo "👤 Current authenticated account:"
           gcloud auth list
-          
+
           echo "🏗️ Current project:"
           gcloud config get-value project
 
@@ -59,10 +72,10 @@ jobs:
           echo "🔑 Checking authentication before download..."
           gcloud auth list
           echo "🏗️ Current project: $(gcloud config get-value project)"
-          
+
           echo "📦 Testing bucket access..."
           gsutil ls gs://orbit-rearch-cache/
-          
+
           echo "📥 Downloading data from bucket..."
           gsutil -m cp -r gs://orbit-rearch-cache/data-08-27 ./emulator-data
           echo "✅ Data downloaded successfully"
