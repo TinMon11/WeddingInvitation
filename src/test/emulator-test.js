@@ -80,8 +80,21 @@ async function testEmulators() {
     console.log('✅ Auto-generated document created!');
     console.log('🆔 Auto-generated ID:', autoDocRef.id);
     
-    // 5. Test de Firestore - Listar documentos
-    console.log('5️⃣ Testing Firestore emulator - Listing documents...');
+    // 5. Test de Firestore - Leer documento específico de la data emulada
+    console.log('5️⃣ Testing Firestore emulator - Reading specific document from emulated data...');
+    const specificDocRef = doc(db, 'protocols', '0AL8xw6XSeWmDlx6laPd');
+    const specificDoc = await getDoc(specificDocRef);
+    
+    if (specificDoc.exists()) {
+      console.log('✅ Specific document found in emulated data!');
+      console.log('📄 Document ID:', specificDoc.id);
+      console.log('📊 Document data:', JSON.stringify(specificDoc.data(), null, 2));
+    } else {
+      console.log('❌ Specific document not found in emulated data!');
+    }
+    
+    // 6. Test de Firestore - Listar documentos
+    console.log('6️⃣ Testing Firestore emulator - Listing documents...');
     const querySnapshot = await getDocs(collection(db, 'test-collection'));
     
     console.log('✅ Documents listed!');
@@ -91,8 +104,8 @@ async function testEmulators() {
       console.log('📄 Document:', doc.id, '=>', doc.data());
     });
     
-    // 6. Verificar que los datos persisten
-    console.log('6️⃣ Testing data persistence...');
+    // 7. Verificar que los datos persisten
+    console.log('7️⃣ Testing data persistence...');
     const verifyDoc = await getDoc(testDocRef);
     
     if (verifyDoc.exists() && verifyDoc.data().message === testData.message) {
