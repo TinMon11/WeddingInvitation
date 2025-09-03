@@ -58,13 +58,7 @@ jobs:
           --health-timeout 5s
           --health-retries 5
           --entrypoint bash
-          -c "
-            npm install -g firebase-tools &&
-            firebase emulators:start 
-              --project tincho-testing 
-              --only firestore,auth
-              --host 0.0.0.0
-          "
+          -c "npm install -g firebase-tools && firebase emulators:start --project tincho-testing --only firestore,auth --host 0.0.0.0"
 
     steps:
       - name: Checkout code
