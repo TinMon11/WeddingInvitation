@@ -39,7 +39,7 @@ async function testEmulators() {
     console.log('✅ Auth emulator working! User ID:', userCredential.user.uid);
     
     // 2. Test de Firestore - Escribir datos
-    console.log('2️⃣ Testing Firestore emulator - Writing data...');
+    console.log('2️⃣ Testing Firestore emulator now - Writing data...');
     
     // Crear un documento con ID específico
     const testDocRef = doc(db, 'test-collection', 'test-doc-1');
