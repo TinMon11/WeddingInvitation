@@ -60,7 +60,7 @@ jobs:
           echo "🏗️ Current project:"
           gcloud config get-value project
           
-          echo "🔧 Setting project from secrets..."
+          echo "🔧 Setting project from secrets...."
           gcloud config set project ${{ secrets.GCP_PROJECT_ID }}
           echo "✅ Project set to: ${{ secrets.GCP_PROJECT_ID }}"
           
@@ -84,9 +84,9 @@ jobs:
           gsutil ls gs://orbit-rearch-cache/
 
           echo "📥 Downloading data from bucket..."
-          gsutil -m cp -r gs://orbit-rearch-cache/data-08-27 ./emulator-data
+          gsutil -m cp -r gs://orbit-rearch-cache/data-08-27 .
           echo "✅ Data downloaded successfully"
-          ls -la ./emulator-data
+          ls -la ./data-08-27
 
       - name: Run linter
         run: npm run lint || echo "Lint completed with warnings"
@@ -95,7 +95,7 @@ jobs:
         run: |
           echo "🧪 === INICIANDO TESTS CON EMULADORES ==="
           echo "1️⃣ Iniciando emuladores en background con data pre-cargada..."
-          firebase emulators:start --project tincho-testing --only firestore,auth --import=./emulator-data &
+          firebase emulators:start --project tincho-testing --only firestore,auth --import=./data-08-27 &
           EMULATOR_PID=$!
 
           echo "2️⃣ Esperando que emuladores estén listos..."
